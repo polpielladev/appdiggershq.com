@@ -1,16 +1,62 @@
 ---
-
+import Project from "../components/Project.astro";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>App Diggers</title>
+  </head>
+  <body
+    class="flex flex-col gap-12 items-center justify-center w-screen overflow-hidden bg-black h-screen max-w-2xl mx-auto"
+  >
+    <section class="text-center items-center flex flex-col gap-4">
+      <img class="object-cover w-full" src="/logo.png" />
+      <p class="text-md text-zinc-300 max-w-md">
+        Building <span class="text-cyan-300">delightful</span> app experiences in
+        public and helping people
+        <span class="text-cyan-300">grow</span> as software developers.
+      </p>
+      <a
+        href="mailto:pol@appdiggershq.com"
+        class="text-white hover:bg-cyan-600 transition-colors bg-cyan-800 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center"
+      >
+        Get in touch
+        <svg
+          class="rtl:rotate-180 w-3.5 h-3.5 ms-2"
+          aria-hidden="true"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 14 10"
+        >
+          <path
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+        </svg>
+      </a>
+    </section>
+
+    <section class="flex flex-col items-center gap-4">
+      <p
+        class="text-[12px] font-bold text-zinc-200 bg-cyan-700/50 px-2 py-1 rounded-lg"
+      >
+        WORKING ON
+      </p>
+      <div class="flex flex-wrap items-center align-middle gap-4">
+        <Project
+          href="https://ioscinewsletter.com"
+          image="/ci-newsletter.svg"
+        />
+        <Project href="https://getqreate.app" image="/qreate.webp" />
+        <Project href="https://polpiella.dev" image="/polpielladev.png" />
+        <Project href="https://helm-app.com/" image="/helm.png" />
+        <Project href="https://nowplaying.page/" image="/now-playing.png" />
+      </div>
+    </section>
+  </body>
 </html>
